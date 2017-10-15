@@ -51,12 +51,9 @@ def cleaned_text(text):
 
 ### fill out the function below that transforms the input text and window-size into a set of input/output pairs for use with our RNN model
 def window_transform_text(text, window_size, step_size):
-    #truncate text to usible length
-    text = text[ : len(text) // window_size * (window_size - 1) + 1]
-
     # containers for input/output pairs
-    inputs = [text[i:i + window_size] for i in range(0, len(text) - (window_size + 1), step_size)]
-    outputs = [text[i + window_size] for i in range(0, len(text) - (window_size + 1), step_size)]
+    inputs = [text[i:i + window_size] for i in range(0, len(text), step_size) if i + window_size < len(text)]
+    outputs = [text[i + window_size] for i in range(0, len(text), step_size) if i + window_size < len(text)]
 
     return inputs,outputs
 
@@ -72,5 +69,5 @@ def build_part2_RNN(window_size, num_chars):
     model.add(Dense(num_chars))
     #softmax activation ( since we are solving a multiclass classification)
     model.add(Activation('softmax'))
-    
+
     return model
