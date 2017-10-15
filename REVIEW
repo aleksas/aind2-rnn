@@ -1,0 +1,15 @@
+Kudos ! I think you've done a perfect job of implementing a recurrent neural net fully. It's very clear that you have a good understanding of the basics. Keep improving and keep learning.
+
+As it appears, you have some idea of LSTMs & RNNs, here’s a very [http://colah.github.io/posts/2015-08-Understanding-LSTMs/ popular blog] that might help you in visually understanding further details.
+
+Advanced tips for improving net results
+
+Try and use deeper architectures, which have general tendency to blow up or vanish the gradients - so there's a net architecture known as Residual Nets, used to circumnavigate the issues with deeper architectures
+Try using more fully connected layers or Bi-Directional LSTMs or GRUs to make the predictions even better
+Try and use more sophisticated methods like lemmatisation and stemming to create a more pruned vocabulary. Have a look at the http://www.nltk.org/ NLTK] library to understand more operations
+If you are keen on learning a bit more into what Natural Language Scientists use regularly in their nets. Try reading up a bit more on
+
+Word2Vec Algorithm
+Glove Algorithm
+[https://www.tensorflow.org/tutorials/seq2seq Sequence2Sequence] tutorial
+Keep up the good work !
